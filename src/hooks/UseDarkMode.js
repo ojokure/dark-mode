@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import useLocalStorage from "./UseLocalStorage";
 
 
 
 
-function useDarkMode(key,initialValue) {
+export default function useDarkMode(key,initialValue) {
 
     const [storedValue, setValue] = useLocalStorage(key,initialValue);
     const [darkMode,setDarkMode] = useState(storedValue)
