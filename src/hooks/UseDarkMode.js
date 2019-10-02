@@ -9,7 +9,7 @@ export default function useDarkMode(key,initialValue) {
     const [storedValue, setValue] = useLocalStorage(key,initialValue);
     const [darkMode,setDarkMode] = useState(storedValue)
   
-    const setDarkmodeModified = (value) => {
+    const setDarkmodeUpdate = (value) => {
       setDarkMode(value);
       document.body.classList.toggle('dark-mode');
   
@@ -17,7 +17,8 @@ export default function useDarkMode(key,initialValue) {
     }
   
   
-    return [darkMode, setDarkmodeModified]
+    return [darkMode, setDarkmodeUpdate]
   }
+
 
 
